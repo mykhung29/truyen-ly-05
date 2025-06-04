@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - Chương 179 - ComicVerse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="css/watch.css">
+</head>
+<body class="theme-light">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+    
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner"></div>
+    
+    <!-- Auto Scroll Indicator -->
+    <div class="auto-scroll-indicator" id="autoScrollIndicator">
+        <i class="fas fa-play pulse"></i>
+        <span>Tự động cuộn</span>
+        <span id="autoScrollSpeed">1x</span>
+    </div>
+    
+    <!-- Zoom Level Indicator -->
+    <div class="zoom-level" id="zoomLevel">100%</div>
+    
+    <!-- Control Panel -->
+    <div class="control-panel" id="controlPanel">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button onclick="goBack()" class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="hidden md:inline">Quay lại</span>
+                </button>
+                <div class="flex items-center gap-2">
+                    <img src="images/truyen1.jpg" alt="Solo Leveling" class="w-8 h-8 rounded object-cover">
+                    <div>
+                        <h1 class="font-bold text-sm">Solo Leveling</h1>
+                        <p class="text-xs text-gray-600">Chương 179: Cuộc chiến cuối cùng</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <!-- Reading Mode -->
+                <div class="flex bg-gray-100 rounded-lg p-1">
+                    <button onclick="setReadingMode('vertical')" class="reading-mode-btn active px-3 py-1 rounded text-sm" data-mode="vertical">
+                        <i class="fas fa-arrows-alt-v"></i>
+                        <span class="hidden md:inline ml-1">Dọc</span>
+                    </button>
+                    <button onclick="setReadingMode('horizontal')" class="reading-mode-btn px-3 py-1 rounded text-sm" data-mode="horizontal">
+                        <i class="fas fa-arrows-alt-h"></i>
+                        <span class="hidden md:inline ml-1">Ngang</span>
+                    </button>
+                    <button onclick="setReadingMode('webtoon')" class="reading-mode-btn px-3 py-1 rounded text-sm" data-mode="webtoon">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="hidden md:inline ml-1">Webtoon</span>
+                    </button>
+                </div>
+                
+                <!-- Settings -->
+                <button onclick="toggleSettings()" class="floating-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+                
+                <!-- Fullscreen -->
+                <button onclick="toggleFullscreen()" class="floating-btn">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Controls -->
+    <div class="bottom-controls" id="bottomControls">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button onclick="previousChapter()" class="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors">
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="hidden md:inline">Chương trước</span>
+                </button>
+                <button onclick="nextChapter()" class="flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors">
+                    <span class="hidden md:inline">Chương sau</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <span class="text-sm text-gray-600">Trang:</span>
+                <span class="font-bold" id="currentPage">1</span>
+                <span class="text-gray-600">/</span>
+                <span class="font-bold" id="totalPages">45</span>
+                
+                <div class="w-32 mx-4">
+                    <input type="range" id="pageSlider" min="1" max="15" value="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                <button onclick="toggleChapterList()" class="floating-btn">
+                    <i class="fas fa-list"></i>
+                </button>
+                <button onclick="toggleMissions()" class="floating-btn">
+                    <i class="fas fa-trophy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Controls -->
+    <div class="floating-controls" id="floatingControls">
+        <button onclick="zoomIn()" class="floating-btn" title="Phóng to">
+            <i class="fas fa-search-plus"></i>
+        </button>
+        <button onclick="zoomOut()" class="floating-btn" title="Thu nhỏ">
+            <i class="fas fa-search-minus"></i>
+        </button>
+        <button onclick="resetZoom()" class="floating-btn" title="Kích thước gốc">
+            <i class="fas fa-search"></i>
+        </button>
+        <button onclick="toggleAutoScroll()" class="floating-btn" id="autoScrollBtn" title="Tự động cuộn">
+            <i class="fas fa-play"></i>
+        </button>
+        <button onclick="toggleTheme()" class="floating-btn" id="themeBtn" title="Đổi nền">
+            <i class="fas fa-palette"></i>
+        </button>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <div class="nav-arrow prev" id="prevArrow" onclick="previousPage()">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="nav-arrow next" id="nextArrow" onclick="nextPage()">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+    
+    <!-- Chapter List Sidebar -->
+    <div class="chapter-sidebar" id="chapterSidebar">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold">Danh sách chương</h3>
+                <button onclick="toggleChapterList()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-2">
+                <div class="chapter-item bg-blue-50 border-l-4 border-blue-500 p-3 rounded cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-semibold text-blue-900">Chương 179: Cuộc chiến cuối cùng</h4>
+                            <p class="text-sm text-blue-700">Đang đọc • 45 trang</p>
+                        </div>
+                        <i class="fas fa-eye text-blue-500"></i>
+                    </div>
+                </div>
+                
+                <div class="chapter-item hover:bg-gray-50 p-3 rounded cursor-pointer transition-colors" onclick="loadChapter(178)">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-semibold">Chương 178: Sức mạnh thực sự</h4>
+                            <p class="text-sm text-gray-600">42 trang • 2 ngày trước</p>
+                        </div>
+                        <i class="fas fa-check text-green-500"></i>
+                    </div>
+                </div>
+                
+                <div class="chapter-item hover:bg-gray-50 p-3 rounded cursor-pointer transition-colors" onclick="loadChapter(177)">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-semibold">Chương 177: Vua Bóng Tối thức tỉnh</h4>
+                            <p class="text-sm text-gray-600">38 trang • 5 ngày trước</p>
+                        </div>
+                        <i class="fas fa-check text-green-500"></i>
+                    </div>
+                </div>
+                
+                <div class="chapter-item hover:bg-gray-50 p-3 rounded cursor-pointer transition-colors" onclick="loadChapter(176)">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-semibold">Chương 176: Đối đầu với Antares</h4>
+                            <p class="text-sm text-gray-600">40 trang • 1 tuần trước</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chapter-item hover:bg-gray-50 p-3 rounded cursor-pointer transition-colors" onclick="loadChapter(175)">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-semibold">Chương 175: Quân đoàn bóng tối</h4>
+                            <p class="text-sm text-gray-600">43 trang • 1 tuần trước</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mission Panel -->
+    <div class="mission-panel" id="missionPanel">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold">Nhiệm vụ đọc truyện</h3>
+                <button onclick="toggleMissions()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Reading Progress Mission -->
+                <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-bold">Đọc hoàn chỉnh chương</h4>
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="mb-3">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Tiến độ</span>
+                            <span id="readingProgress">22%</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-2">
+                            <div class="bg-white h-2 rounded-full transition-all duration-300" style="width: 22%" id="readingProgressBar"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-90">Phần thưởng: 50 điểm + Badge "Độc giả chăm chỉ"</p>
+                </div>
+                
+                <!-- Speed Reading Mission -->
+                <div class="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-bold">Đọc nhanh</h4>
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="mb-3">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Thời gian đọc</span>
+                            <span id="readingTime">5:23</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-2">
+                            <div class="bg-white h-2 rounded-full transition-all duration-300" style="width: 65%" id="speedProgressBar"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-90">Mục tiêu: Đọc xong trong 10 phút</p>
+                </div>
+                
+                <!-- Interaction Mission -->
+                <div class="bg-gradient-to-r from-orange-500 to-red-600 text-white p-4 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-bold">Tương tác</h4>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center justify-between">
+                            <span>Zoom ảnh</span>
+                            <span class="text-green-300"><i class="fas fa-check"></i></span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Đổi chế độ đọc</span>
+                            <span class="text-yellow-300"><i class="fas fa-clock"></i></span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Sử dụng tự động cuộn</span>
+                            <span class="text-yellow-300"><i class="fas fa-clock"></i></span>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-90 mt-3">Phần thưởng: 30 điểm</p>
+                </div>
+                
+                <!-- Daily Mission -->
+                <div class="bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 rounded-xl">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-bold">Nhiệm vụ hàng ngày</h4>
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="mb-3">
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Đọc 3 chương</span>
+                            <span>1/3</span>
+                        </div>
+                        <div class="w-full bg-white/20 rounded-full h-2">
+                            <div class="bg-white h-2 rounded-full transition-all duration-300" style="width: 33%"></div>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-90">Phần thưởng: 100 điểm + Streak bonus</p>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="mt-6 p-4 bg-gray-50 rounded-xl">
+                <h4 class="font-bold mb-3">Thống kê hôm nay</h4>
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-blue-600">3</div>
+                        <div class="text-sm text-gray-600">Chương đã đọc</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-green-600">45m</div>
+                        <div class="text-sm text-gray-600">Thời gian đọc</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-purple-600">250</div>
+                        <div class="text-sm text-gray-600">Điểm kiếm được</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-orange-600">7</div>
+                        <div class="text-sm text-gray-600">Ngày liên tiếp</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Settings Panel -->
+    <div class="overlay" id="overlay" onclick="closeSettings()"></div>
+    <div class="settings-panel" id="settingsPanel">
+        <div class="flex items-center justify-between mb-6">
+            <h3 class="text-xl font-bold">Cài đặt đọc truyện</h3>
+            <button onclick="closeSettings()" class="text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="space-y-6">
+            <!-- Theme Settings -->
+            <div>
+                <h4 class="font-semibold mb-3">Chủ đề nền</h4>
+                <div class="grid grid-cols-3 gap-3">
+                    <button onclick="setTheme('light')" class="theme-option p-3 rounded-lg border-2 border-gray-200 bg-white text-gray-900 text-center transition-colors" data-theme="light">
+                        <i class="fas fa-sun mb-1"></i>
+                        <div class="text-sm">Sáng</div>
+                    </button>
+                    <button onclick="setTheme('dark')" class="theme-option p-3 rounded-lg border-2 border-gray-600 bg-gray-800 text-white text-center transition-colors" data-theme="dark">
+                        <i class="fas fa-moon mb-1"></i>
+                        <div class="text-sm">Tối</div>
+                    </button>
+                    <button onclick="setTheme('black')" class="theme-option p-3 rounded-lg border-2 border-gray-800 bg-black text-white text-center transition-colors" data-theme="black">
+                        <i class="fas fa-circle mb-1"></i>
+                        <div class="text-sm">Đen</div>
+                    </button>
+                    <button onclick="setTheme('sepia')" class="theme-option p-3 rounded-lg border-2 border-yellow-600 bg-yellow-100 text-yellow-900 text-center transition-colors" data-theme="sepia">
+                        <i class="fas fa-book mb-1"></i>
+                        <div class="text-sm">Sepia</div>
+                    </button>
+                    <button onclick="setTheme('green')" class="theme-option p-3 rounded-lg border-2 border-green-800 bg-green-900 text-green-100 text-center transition-colors" data-theme="green">
+                        <i class="fas fa-leaf mb-1"></i>
+                        <div class="text-sm">Xanh</div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Auto Scroll Settings -->
+            <div>
+                <h4 class="font-semibold mb-3">Tự động cuộn</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span>Tốc độ cuộn</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm" id="scrollSpeedValue">1x</span>
+                            <input type="range" id="scrollSpeedSlider" min="0.5" max="3" step="0.1" value="1" class="w-24">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Tự động chuyển trang</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="autoPageTurn" class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Zoom Settings -->
+            <div>
+                <h4 class="font-semibold mb-3">Zoom và hiển thị</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span>Zoom mặc định</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm" id="defaultZoomValue">100%</span>
+                            <input type="range" id="defaultZoomSlider" min="50" max="200" step="10" value="100" class="w-24">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Fit to width</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="fitToWidth" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gesture Settings -->
+            <div>
+                <h4 class="font-semibold mb-3">Điều khiển cử chỉ</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span>Vuốt để chuyển trang</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="swipeGestures" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span>Nhấp để chuyển trang</span>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="clickToTurn" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex gap-3 mt-8">
+            <button onclick="resetSettings()" class="flex-1 px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors">
+                Đặt lại
+            </button>
+            <button onclick="closeSettings()" class="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors">
+                Áp dụng
+            </button>
+        </div>
+    </div>
+    
+    <!-- Touch Area for Gestures -->
+    <div class="touch-area active" id="touchArea"></div>
+    
+    <!-- Reading Container -->
+    <div class="reading-container reading-mode-vertical " id="readingContainer">
+        <!-- Comic Pages -->
+        <img src="images/truyen1.jpg" alt="Page 1" class="comic-page" data-page="1">
+        <img src="images/truyen1.jpg" alt="Page 2" class="comic-page" data-page="2">
+        <img src="images/truyen1.jpg" alt="Page 3" class="comic-page" data-page="3">
+        <img src="images/truyen1.jpg" alt="Page 4" class="comic-page" data-page="4">
+        <img src="images/truyen1.jpg" alt="Page 5" class="comic-page" data-page="5">
+        <img src="images/truyen1.jpg" alt="Page 6" class="comic-page" data-page="6">
+        <img src="images/truyen1.jpg" alt="Page 7" class="comic-page" data-page="7">
+        <img src="images/truyen1.jpg" alt="Page 8" class="comic-page" data-page="8">
+        <img src="images/truyen1.jpg" alt="Page 9" class="comic-page" data-page="9">
+        <img src="images/truyen1.jpg" alt="Page 10" class="comic-page" data-page="10">
+        <img src="images/truyen1.jpg" alt="Page 11" class="comic-page" data-page="11">
+        <img src="images/truyen1.jpg" alt="Page 12" class="comic-page" data-page="12">
+        <img src="images/truyen1.jpg" alt="Page 13" class="comic-page" data-page="13">
+        <img src="images/truyen1.jpg" alt="Page 14" class="comic-page" data-page="14">
+        <img src="images/truyen1.jpg" alt="Page 15" class="comic-page" data-page="15">
+    </div>
+
+    <script src="js/watch.js"></script>
+</body>
+</html>

@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - ComicVerse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="js/tailwind.js"></script>
+    <link rel="stylesheet" href="css/layout.css">
+  
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 min-h-screen">
+
+     <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg shadow-slate-200/50 border-b border-slate-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-18 lg:h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2 group flex-shrink-0">
+                    <div class="relative">
+                        <i class="fas fa-book-open text-xl sm:text-2xl text-primary-600 animate-pulse-slow group-hover:scale-110 transition-transform duration-300"></i>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-bold gradient-text relative">
+                        MangaHub
+                        <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full transition-all duration-500"></div>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden 2xl:flex items-center space-x-8 flex-1 justify-center">
+                    <div class="relative group">
+                        <a href="index.html" class="px-4 py-2 text-slate-600 hover:text-primary-600 font-medium transition-all duration-300 relative">
+                            Trang chủ
+                            <div class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
+                        </a>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="category.html" class="px-4 py-2 text-slate-600 hover:text-primary-600 font-medium transition-all duration-300 relative">
+                            Thể loại
+                            <div class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary-600 to-secondary-600 rounded-l-xl"></div>
+                            <div class="py-2">
+                                <a href="category.html" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-fire w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Hành động</span>
+                                </a>
+                                <a href="category.html" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-heart w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Tình cảm</span>
+                                </a>
+                                <a href="category.html" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-laugh w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Hài hước</span>
+                                </a>
+                                <a href="category.html" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-dragon w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Fantasy</span>
+                                </a>
+                                <a href="category.html" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-ghost w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Kinh dị</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="#" class="px-4 py-2 text-slate-600 hover:text-primary-600 font-medium transition-all duration-300 relative">
+                            Mới cập nhật
+                            <div class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
+                        </a>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="#" class="px-4 py-2 text-slate-600 hover:text-primary-600 font-medium transition-all duration-300 relative">
+                            Xếp hạng
+                            <div class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
+                        </a>
+                        <!-- Dropdown -->
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-primary-600 to-secondary-600 rounded-r-xl"></div>
+                            <div class="py-2">
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-calendar-day w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Top ngày</span>
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-calendar-week w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Top tuần</span>
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-calendar-alt w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Top tháng</span>
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-star w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Top all time</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="#" class="px-4 py-2 text-slate-600 hover:text-primary-600 font-medium transition-all duration-300 relative">
+                            Yêu thích
+                            <div class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></div>
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- Desktop Search -->
+                <div class="hidden md:flex items-center flex-shrink-0">
+                    <div class="relative group">
+                        <div class="flex items-center bg-slate-50 rounded-full px-4 py-2 w-64 lg:w-72 border-2 border-transparent group-focus-within:border-primary-300 group-focus-within:bg-white group-focus-within:shadow-lg transition-all duration-300">
+                            <input type="text" placeholder="Tìm kiếm truyện..." class="search-input flex-1 bg-transparent outline-none text-slate-700 placeholder-slate-400 text-sm">
+                            <button class="ml-2 p-1.5 rounded-full text-slate-400 hover:text-primary-600 hover:bg-primary-100 transition-all duration-300 group">
+                                <i class="fas fa-search text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Actions -->
+                <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+              
+                    <!-- Notification -->
+                    <button class="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 hidden xl:flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 group">
+                        <i class="fas fa-bell text-sm group-hover:animate-bounce"></i>
+                        <span class="absolute -top-1 -right-1 w-5 h-5 bg-secondary-500 text-white text-xs rounded-full flex items-center justify-center font-medium shadow-lg">3</span>
+                    </button>
+                    
+                    <!-- Bookmark -->
+                    <button class="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-slate-100 hidden xl:flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 group">
+                        <i class="fas fa-bookmark text-sm group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute -top-1 -right-1 w-5 h-5 bg-secondary-500 text-white text-xs rounded-full flex items-center justify-center font-medium shadow-lg">12</span>
+                    </button>
+                    
+                    <!-- User Profile -->
+                    <div class="relative group hidden 2xl:flex ">
+                        <div class="flex items-center space-x-2 sm:space-x-3 bg-slate-100 rounded-full p-1.5 sm:p-2 hover:bg-primary-100 transition-all duration-300 cursor-pointer">
+                            <div class="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-primary-600 to-secondary-600 flex items-center justify-center text-white font-semibold text-sm overflow-hidden">
+                                A
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 animate-shine"></div>
+                            </div>
+                            <span class="hidden sm:block text-sm font-medium text-slate-700 group-hover:text-primary-600 transition-colors duration-300">Admin</span>
+                        </div>
+                        
+                        <!-- User Dropdown -->
+                        <div class="absolute top-full right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-primary-600 to-secondary-600 rounded-r-xl"></div>
+                            <div class="py-2">
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-user w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Hồ sơ cá nhân</span>
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-heart w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Truyện yêu thích</span>
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-history w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Lịch sử đọc</span>
+                                </a>
+                                <a href="#" class="flex items-center px-4 py-3 text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-cog w-5 text-primary-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Cài đặt</span>
+                                </a>
+                                <div class="border-t border-slate-100 my-2"></div>
+                                <a href="#" class="flex items-center px-4 py-3 text-red-600 hover:text-red-700 hover:bg-red-50 transition-all duration-200 group/item">
+                                    <i class="fas fa-sign-out-alt w-5 text-red-600 group-hover/item:translate-x-1 transition-transform duration-200"></i>
+                                    <span class="ml-3">Đăng xuất</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="2xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-100 flex items-center justify-center hover:bg-primary-100 transition-all duration-300 relative">
+                        <div class="w-5 h-4 relative">
+                            <span class="hamburger-line absolute w-full h-0.5 bg-slate-700 top-0 left-0 origin-left"></span>
+                            <span class="hamburger-line absolute w-full h-0.5 bg-slate-700 top-1.5 left-0 origin-left"></span>
+                            <span class="hamburger-line absolute w-full h-0.5 bg-slate-700 top-3 left-0 origin-left"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Search -->
+        <div id="mobile-search" class="xl:hidden fixed top-0 left-0 right-0 bg-white shadow-lg z-40 transform -translate-y-full transition-transform duration-300">
+            <div class="p-4">
+                <div class="flex items-center space-x-3">
+                    <div class="flex-1 relative">
+                        <input type="text" placeholder="Tìm kiếm truyện..." class="w-full bg-slate-50 border-2 border-slate-200 rounded-full px-4 py-3 outline-none focus:border-primary-300 focus:bg-white transition-all duration-300">
+                    </div>
+                    <button class="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center hover:bg-primary-700 transition-all duration-300">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button id="mobile-search-close" class="w-12 h-12 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center hover:bg-slate-200 transition-all duration-300">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-custom opacity-0 invisible transition-all duration-300 z-40"></div>
+
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobile-menu" class=":hidden overflow-y-auto fixed top-0 left-0 w-80 h-full bg-white transform -translate-x-full transition-transform duration-300 z-50 shadow-2xl">
+        <!-- Menu Header -->
+        <div class="bg-gradient-to-r from-primary-600 to-secondary-600 p-6 text-white">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-book-open text-2xl"></i>
+                    <span class="text-xl font-bold">MangaHub</span>
+                </div>
+                <button id="mobile-menu-close" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-all duration-300">
+                    <i class="fas fa-times text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="flex-1 overflow-y-auto hide-scrollbar">
+            <!-- Main Navigation -->
+            <div class="p-6">
+                <!-- Desktop Search -->
+                <div class="flex items-center flex-shrink-0">
+                    <div class="relative group">
+                        <div class="flex items-center bg-slate-50 rounded-full my-2 p-1 w-64 lg:w-72 border-2 border-transparent group-focus-within:border-primary-300 group-focus-within:bg-white group-focus-within:shadow-lg transition-all duration-300">
+                            <input type="text" placeholder="Tìm kiếm truyện..." class="search-input-mobile flex-1 bg-transparent outline-none text-slate-700 placeholder-slate-400 text-sm">
+                            <button class="ml-2 p-1.5 rounded-full text-slate-400 hover:text-primary-600 hover:bg-primary-100 transition-all duration-300 group">
+                                <i class="fas fa-search text-sm group-hover:rotate-90 transition-transform duration-300"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Điều hướng</div>
+                <div class="space-y-1">
+                    <a href="index.html" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-home w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Trang chủ</span>
+                        <div class="ml-auto w-2 h-2 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <div class="mobile-menu-item">
+                         <button id="categoriesmobile" type="button" class="flex items-center space-x-3 p-3 w-full text-left rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                            <i class="fas fa-list w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                            <span class="font-medium">Thể loại</span>
+                            <div class="ml-auto w-2 h-2 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                        <div id="categories-submenu" class="ml-8 mt-2 space-y-1 bg-slate-50 rounded-lg p-2 hidden">
+                            <a href="category.html" class="flex items-center space-x-2 p-2 rounded text-slate-600 hover:text-primary-600 hover:bg-white transition-all duration-200 text-sm group">
+                                <i class="fas fa-fire w-4 text-primary-600 group-hover:scale-110 transition-transform duration-200"></i>
+                                <span>Hành động</span>
+                            </a>
+                            <a href="category.html" class="flex items-center space-x-2 p-2 rounded text-slate-600 hover:text-primary-600 hover:bg-white transition-all duration-200 text-sm group">
+                                <i class="fas fa-heart w-4 text-primary-600 group-hover:scale-110 transition-transform duration-200"></i>
+                                <span>Tình cảm</span>
+                            </a>
+                            <a href="category.html" class="flex items-center space-x-2 p-2 rounded text-slate-600 hover:text-primary-600 hover:bg-white transition-all duration-200 text-sm group">
+                                <i class="fas fa-laugh w-4 text-primary-600 group-hover:scale-110 transition-transform duration-200"></i>
+                                <span>Hài hước</span>
+                            </a>
+                            <a href="category.html" class="flex items-center space-x-2 p-2 rounded text-slate-600 hover:text-primary-600 hover:bg-white transition-all duration-200 text-sm group">
+                                <i class="fas fa-dragon w-4 text-primary-600 group-hover:scale-110 transition-transform duration-200"></i>
+                                <span>Fantasy</span>
+                            </a>
+                        </div>
+                    </div>
+
+                 
+                    
+                    <a href="#" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-clock w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Mới cập nhật</span>
+                        <div class="ml-auto w-2 h-2 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <a href="#" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-trophy w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Xếp hạng</span>
+                        <div class="ml-auto w-2 h-2 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <a href="#" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-heart w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Yêu thích</span>
+                        <div class="ml-auto w-2 h-2 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="px-6 pb-6">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Tiện ích</div>
+                <div class="space-y-1">
+                    <a href="#" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-bell w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Thông báo</span>
+                        <span class="ml-auto bg-secondary-500 text-white text-xs px-2 py-1 rounded-full font-medium">3</span>
+                    </a>
+                    
+                    <a href="#" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-bookmark w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Bookmark</span>
+                        <span class="ml-auto bg-secondary-500 text-white text-xs px-2 py-1 rounded-full font-medium">12</span>
+                    </a>
+                    
+                    <a href="#" class="mobile-menu-item flex items-center space-x-3 p-3 rounded-lg text-slate-700 hover:text-primary-600 hover:bg-primary-50 border-l-4 border-transparent hover:border-primary-600 transition-all duration-300 group">
+                        <i class="fas fa-history w-5 text-primary-600 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="font-medium">Lịch sử đọc</span>
+                        <div class="ml-auto w-2 h-2 rounded-full bg-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Section -->
+        <div class="border-t border-slate-200 bg-slate-50 p-6">
+            <div class="flex items-center space-x-3 mb-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-secondary-600 flex items-center justify-center text-white font-bold text-lg">
+                    A
+                </div>
+                <div>
+                    <div class="font-semibold text-slate-800">Admin User</div>
+                    <div class="text-sm text-slate-500">admin@mangahub.com</div>
+                </div>
+            </div>
+            <div class="flex space-x-2">
+                <a href="#" class="flex-1 bg-primary-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-300">
+                    Hồ sơ
+                </a>
+                <a href="#" class="flex-1 bg-slate-200 text-slate-700 text-center py-2 px-4 rounded-lg font-medium hover:bg-slate-300 transition-colors duration-300">
+                    Đăng xuất
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <!-- <div class="breadcrumb">
+            <a href="index.html"><i class="fas fa-home mr-1"></i> Trang chủ</a>
+            <i class="fas fa-chevron-right text-gray-400"></i>
+            <a href="#">Manhwa</a>
+            <i class="fas fa-chevron-right text-gray-400"></i>
+            <a href="#">Action</a>
+            <i class="fas fa-chevron-right text-gray-400"></i>
+            <span class="text-gray-600">Solo Leveling</span>
+        </div> -->
+
+        <!-- Hero Section -->
+        <section class="relative mb-12">
+            <div class="floating-elements"></div>
+            <div class="glass-card rounded-3xl overflow-hidden neon-glow">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-900/80 via-blue-900/60 to-pink-900/80"></div>
+                    <img src="images/truyenthumb11.jpg" alt="Solo Leveling" class="w-full h-96 lg:h-[500px] object-cover">
+                    
+                    <div class="absolute inset-0 flex items-end">
+                        <div class="p-8 lg:p-12 text-white w-full">
+                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-end">
+                                <div class="lg:col-span-2">
+                                    <!-- Status Badges -->
+                                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                                        <span class="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold pulse">
+                                            <i class="fas fa-fire mr-1"></i> #1 TRENDING
+                                        </span>
+                                        <span class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                                            <i class="fas fa-clock mr-1"></i> MỚI CẬP NHẬT
+                                        </span>
+                                        <span class="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                                            <i class="fas fa-crown mr-1"></i> VIP
+                                        </span>
+                                    </div>
+
+                                    <!-- Title -->
+                                    <h1 class="text-4xl lg:text-6xl font-bold mb-4 gradient-text">
+                                        Solo Leveling
+                                    </h1>
+                                    <p class="text-xl text-gray-200 mb-6 leading-relaxed">
+                                        나 혼자만 레벨업 • I Level Up Alone
+                                    </p>
+
+                                    <!-- Tags -->
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <span class="comic-tag action">
+                                            <i class="fas fa-fist-raised mr-1"></i> Action
+                                        </span>
+                                        <span class="comic-tag fantasy">
+                                            <i class="fas fa-magic mr-1"></i> Fantasy
+                                        </span>
+                                        <span class="comic-tag manhwa">
+                                            <i class="fas fa-flag mr-1"></i> Manhwa
+                                        </span>
+                                        <span class="comic-tag supernatural">
+                                            <i class="fas fa-ghost mr-1"></i> Supernatural
+                                        </span>
+                                    </div>
+
+                                    <!-- Rating & Stats -->
+                                    <!-- <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                                        <div class="stats-card">
+                                            <div class="star-rating justify-center mb-2">
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                                <span class="star">★</span>
+                                            </div>
+                                            <div class="text-2xl font-bold">9.8</div>
+                                            <div class="text-sm opacity-80">15.2K đánh giá</div>
+                                        </div>
+                                        <div class="stats-card">
+                                            <i class="fas fa-eye text-2xl mb-2"></i>
+                                            <div class="text-2xl font-bold">2.1M</div>
+                                            <div class="text-sm opacity-80">Lượt đọc</div>
+                                        </div>
+                                        <div class="stats-card">
+                                            <i class="fas fa-heart text-2xl mb-2"></i>
+                                            <div class="text-2xl font-bold">450K</div>
+                                            <div class="text-sm opacity-80">Yêu thích</div>
+                                        </div>
+                                        <div class="stats-card">
+                                            <i class="fas fa-bookmark text-2xl mb-2"></i>
+                                            <div class="text-2xl font-bold">179</div>
+                                            <div class="text-sm opacity-80">Chương</div>
+                                        </div>
+                                    </div> -->
+
+                                    <!-- Action Buttons -->
+                                    <div class="flex flex-wrap items-center gap-4">
+                                        <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-3 hover:bg-red-500" id="likeBtn">
+                                            <i class="fas fa-heart mr-2"></i>
+                                            <span>Yêu thích (450K)</span>
+                                        </button>
+                                        <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-3 hover:bg-blue-500" id="bookmarkBtn">
+                                            <i class="fas fa-bookmark mr-2"></i>
+                                            <span>Đánh dấu</span>
+                                        </button>
+                                        <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-3 hover:bg-green-500" onclick="openShareModal()">
+                                            <i class="fas fa-share mr-2"></i>
+                                            <span>Chia sẻ</span>
+                                        </button>
+                                        <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-3 hover:bg-purple-500">
+                                            <i class="fas fa-download mr-2"></i>
+                                            <span>Tải xuống</span>
+                                        </button>
+                                        <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-4 py-3 hover:bg-yellow-500" onclick="openRatingModal()">
+                                            <i class="fas fa-star mr-2"></i>
+                                            <span>Đánh giá</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Reading Actions -->
+                                <div class="flex flex-col gap-4">
+                                    <a href="watch.html">
+                                    <button class="action-btn morphing-btn bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 text-lg font-semibold">
+                                        <i class="fas fa-play mr-3"></i>
+                                        Đọc từ đầu
+                                    </button></a>
+                                    <a href="watch.html">
+                                    <button class="action-btn morphing-btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 text-lg font-semibold">
+                                        <i class="fas fa-bookmark mr-3"></i>
+                                        Đọc tiếp (Chương 179)
+                                    </button></a>
+                                    <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4">
+                                        <i class="fas fa-plus mr-3"></i>
+                                        Thêm vào thư viện
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <!-- Tabs Navigation -->
+                <div class="glass-card rounded-2xl p-2 mb-8 relative">
+                    <div class="flex flex-wrap gap-2 relative">
+                        <button class="tab-button active px-6 py-3 rounded-xl font-semibold transition-all" data-tab="info">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Thông tin
+                        </button>
+                        <button class="tab-button px-6 py-3 rounded-xl font-semibold transition-all" data-tab="chapters">
+                            <i class="fas fa-list mr-2"></i>
+                            Chương (179)
+                        </button>
+                        <button class="tab-button px-6 py-3 rounded-xl font-semibold transition-all" data-tab="comments">
+                            <i class="fas fa-comments mr-2"></i>
+                            Bình luận (1.2K)
+                        </button>
+                        <button class="tab-button px-6 py-3 rounded-xl font-semibold transition-all" data-tab="gallery">
+                            <i class="fas fa-images mr-2"></i>
+                            Thư viện (45)
+                        </button>
+                        <div class="tab-indicator" id="tabIndicator"></div>
+                    </div>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="tab-content">
+                    <!-- Info Tab -->
+                    <div id="info" class="tab-pane active">
+                        <div class="glass-card rounded-2xl p-8 floating-card">
+                            <h3 class="text-2xl font-bold gradient-text mb-6">Thông tin truyện</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-4">Chi tiết</h4>
+                                    <div class="space-y-3">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Tác giả:</span>
+                                            <span class="font-semibold">Chugong</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Họa sĩ:</span>
+                                            <span class="font-semibold">DUBU (REDICE STUDIO)</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Trạng thái:</span>
+                                            <span class="text-green-600 font-semibold">Đang cập nhật</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Năm phát hành:</span>
+                                            <span class="font-semibold">2018</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600">Lượt xem:</span>
+                                            <span class="font-semibold">2.1M</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-4">Thống kê</h4>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <div class="flex justify-between mb-2">
+                                                <span class="text-gray-600">Đánh giá</span>
+                                                <span class="font-semibold">9.8/10</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                                <div class="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full" style="width: 98%"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between mb-2">
+                                                <span class="text-gray-600">Độ phổ biến</span>
+                                                <span class="font-semibold">95%</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                                <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full" style="width: 95%"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-between mb-2">
+                                                <span class="text-gray-600">Tiến độ</span>
+                                                <span class="font-semibold">Chương 179</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                                <div class="bg-gradient-to-r from-green-400 to-emerald-500 h-2 rounded-full" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-8">
+                                <h4 class="font-semibold text-gray-900 mb-4">Tóm tắt</h4>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    Sung Jin-Woo là thợ săn hạng E yếu nhất thế giới. Trong một cuộc thám hiểm hầm ngục, 
+                                    anh và nhóm của mình gặp phải một hầm ngục kép. Sau khi hầu như cả nhóm bị tiêu diệt, 
+                                    Jin-Woo được chọn bởi hệ thống và trở thành "Player" duy nhất có thể tăng cấp.
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    Từ thợ săn yếu nhất, Jin-Woo bắt đầu hành trình trở thành Vua Bóng Tối mạnh nhất. 
+                                    Với khả năng triệu hồi quân đoàn bóng tối và sức mạnh không giới hạn, anh sẽ đối mặt 
+                                    với những thử thách lớn nhất để bảo vệ thế giới khỏi các Monarch.
+                                </p>
+                                <button class="text-blue-600 hover:text-blue-700 font-semibold">
+                                    Đọc thêm <i class="fas fa-chevron-down ml-1"></i>
+                                </button>
+                            </div>
+
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-4">Thể loại liên quan</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="comic-tag action">Action</span>
+                                    <span class="comic-tag fantasy">Fantasy</span>
+                                    <span class="comic-tag manhwa">Manhwa</span>
+                                    <span class="comic-tag supernatural">Supernatural</span>
+                                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Adventure</span>
+                                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Drama</span>
+                                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Shounen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chapters Tab -->
+                    <div id="chapters" class="tab-pane">
+                        <div class="glass-card rounded-2xl p-6 floating-card">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-2xl font-bold gradient-text">Danh sách chương</h3>
+                                <div class="flex items-center gap-4">
+                                    <select class="glass-card border-0 rounded-lg px-4 py-2 text-sm">
+                                        <option>Mới nhất</option>
+                                        <option>Cũ nhất</option>
+                                    </select>
+                                    <button class="action-btn morphing-btn bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 text-sm">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Tải offline
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-3">
+                                <!-- Chapter items -->
+                                <div class="chapter-card rounded-xl p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold">
+                                                179
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Chương 179: Cuộc chiến cuối cùng</h4>
+                                                <p class="text-gray-500 text-sm">2 giờ trước • 45 trang • 15.2K lượt xem</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold pulse">MỚI</span>
+                                            <i class="fas fa-chevron-right text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-card rounded-xl p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-white font-bold">
+                                                178
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Chương 178: Sức mạnh thực sự</h4>
+                                                <p class="text-gray-500 text-sm">1 ngày trước • 42 trang • 28.5K lượt xem</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">HOT</span>
+                                            <i class="fas fa-chevron-right text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-card rounded-xl p-4 cursor-pointer opacity-70">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-white font-bold">
+                                                177
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Chương 177: Vua Bóng Tối thức tỉnh</h4>
+                                                <p class="text-gray-500 text-sm">3 ngày trước • 38 trang • 45.1K lượt xem</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-check text-green-500"></i>
+                                            <span class="text-green-600 text-sm font-semibold">Đã đọc</span>
+                                            <i class="fas fa-chevron-right text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-card rounded-xl p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold">
+                                                176
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Chương 176: Đối đầu với Antares</h4>
+                                                <p class="text-gray-500 text-sm">5 ngày trước • 40 trang • 52.3K lượt xem</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-chevron-right text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="chapter-card rounded-xl p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-4">
+                                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold">
+                                                175
+                                            </div>
+                                            <div>
+                                                <h4 class="font-semibold text-gray-900">Chương 175: Quân đoàn bóng tối</h4>
+                                                <p class="text-gray-500 text-sm">1 tuần trước • 43 trang • 61.7K lượt xem</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-chevron-right text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-8">
+                                <button class="action-btn morphing-btn bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3">
+                                    <i class="fas fa-plus mr-2"></i>
+                                    Xem thêm chương
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Tab -->
+                    <div id="comments" class="tab-pane">
+                        <div class="glass-card rounded-2xl p-6 floating-card">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-2xl font-bold gradient-text">Bình luận (1,234)</h3>
+                                <select class="glass-card border-0 rounded-lg px-4 py-2 text-sm">
+                                    <option>M���i nhất</option>
+                                    <option>Phổ biến nhất</option>
+                                    <option>Cũ nhất</option>
+                                </select>
+                            </div>
+
+                            <!-- Comment Form -->
+                            <div class="comment-card mb-6">
+                                <div class="flex gap-4">
+                                    <img src="images/truyen1.jpg" alt="User" class="w-12 h-12 rounded-full object-cover border-2 border-purple-200">
+                                    <div class="flex-1">
+                                        <textarea 
+                                            placeholder="Chia sẻ cảm nghĩ của bạn về truyện..." 
+                                            class="w-full p-4 border-0 bg-gray-50 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                            rows="3"
+                                        ></textarea>
+                                        <div class="flex items-center justify-between mt-4">
+                                            <div class="flex items-center gap-3">
+                                                <button class="text-gray-500 hover:text-purple-600 transition-colors">
+                                                    <i class="fas fa-smile text-xl"></i>
+                                                </button>
+                                                <button class="text-gray-500 hover:text-purple-600 transition-colors">
+                                                    <i class="fas fa-image text-xl"></i>
+                                                </button>
+                                                <button class="text-gray-500 hover:text-purple-600 transition-colors">
+                                                    <i class="fas fa-gif text-xl"></i>
+                                                </button>
+                                            </div>
+                                            <button class="action-btn morphing-btn bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2">
+                                                <i class="fas fa-paper-plane mr-2"></i>
+                                                Đăng bình luận
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Comments List -->
+                            <div class="space-y-4">
+                                <div class="comment-card">
+                                    <div class="flex gap-4">
+                                        <img src="images/truyen1.jpg" alt="User" class="w-12 h-12 rounded-full object-cover border-2 border-purple-200">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <h4 class="font-bold text-gray-900">Reader_Pro</h4>
+                                                <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold">VIP</span>
+                                                <span class="text-gray-500 text-sm">2 giờ trước</span>
+                                            </div>
+                                            <p class="text-gray-700 mb-3 leading-relaxed">
+                                                Chương này quá hay! Jin-Woo cuối cùng cũng thể hiện được sức mạnh thực sự của mình. 
+                                                Scene chiến đấu với Antares thật sự epic, không thể chờ đợi chương tiếp theo! 🔥🔥🔥
+                                            </p>
+                                            <div class="flex items-center gap-6 text-sm">
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-red-500 transition-colors">
+                                                    <i class="fas fa-heart"></i>
+                                                    <span>245</span>
+                                                </button>
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-blue-500 transition-colors">
+                                                    <i class="fas fa-reply"></i>
+                                                    <span>Trả lời</span>
+                                                </button>
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-yellow-500 transition-colors">
+                                                    <i class="fas fa-share"></i>
+                                                    <span>Chia sẻ</span>
+                                                </button>
+                                                <button class="text-gray-400 hover:text-red-500 transition-colors">
+                                                    <i class="fas fa-flag"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment-card">
+                                    <div class="flex gap-4">
+                                        <img src="images/truyen1.jpg" alt="User" class="w-12 h-12 rounded-full object-cover border-2 border-blue-200">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <h4 class="font-bold text-gray-900">Manga_Lover</h4>
+                                                <span class="text-gray-500 text-sm">5 giờ trước</span>
+                                            </div>
+                                            <p class="text-gray-700 mb-3 leading-relaxed">
+                                                Art style trong chương này thật sự ấn tượng. Những scene chiến đấu được vẽ rất mượt mà và chi tiết. 
+                                                DUBU thật sự là một nghệ sĩ tài năng! 🎨
+                                            </p>
+                                            <div class="flex items-center gap-6 text-sm mb-4">
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-red-500 transition-colors">
+                                                    <i class="fas fa-heart"></i>
+                                                    <span>89</span>
+                                                </button>
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-blue-500 transition-colors">
+                                                    <i class="fas fa-reply"></i>
+                                                    <span>Trả lời</span>
+                                                </button>
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-yellow-500 transition-colors">
+                                                    <i class="fas fa-share"></i>
+                                                    <span>Chia sẻ</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Reply -->
+                                            <div class="ml-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+                                                <div class="flex gap-3">
+                                                    <img src="images/truyen1.jpg" alt="User" class="w-8 h-8 rounded-full object-cover">
+                                                    <div class="flex-1">
+                                                        <div class="flex items-center gap-2 mb-1">
+                                                            <h4 class="font-semibold text-gray-900 text-sm">Comic_Fan</h4>
+                                                            <span class="text-gray-500 text-xs">3 giờ trước</span>
+                                                        </div>
+                                                        <p class="text-gray-700 text-sm">
+                                                            Đồng ý! Đặc biệt là scene Jin-Woo triệu hồi quân đoàn bóng tối, quá epic! 
+                                                            Mỗi con shadow soldier đều được vẽ rất chi tiết 💀⚔️
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment-card">
+                                    <div class="flex gap-4">
+                                        <img src="images/truyen1.jpg" alt="User" class="w-12 h-12 rounded-full object-cover border-2 border-green-200">
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <h4 class="font-bold text-gray-900">Webtoon_Addict</h4>
+                                                <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold">Thành viên</span>
+                                                <span class="text-gray-500 text-sm">1 ngày trước</span>
+                                            </div>
+                                            <p class="text-gray-700 mb-3 leading-relaxed">
+                                                Ai còn nhớ Jin-Woo lúc đầu yếu như thế nào không? Character development trong series này thật sự tuyệt vời! 
+                                                Từ E-rank hunter yếu nhất đến Shadow Monarch mạnh nhất 👑
+                                            </p>
+                                            <div class="flex items-center gap-6 text-sm">
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-red-500 transition-colors">
+                                                    <i class="fas fa-heart"></i>
+                                                    <span>156</span>
+                                                </button>
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-blue-500 transition-colors">
+                                                    <i class="fas fa-reply"></i>
+                                                    <span>Trả lời</span>
+                                                </button>
+                                                <button class="flex items-center gap-2 text-gray-500 hover:text-yellow-500 transition-colors">
+                                                    <i class="fas fa-share"></i>
+                                                    <span>Chia sẻ</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-8">
+                                <button class="action-btn morphing-btn bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3">
+                                    <i class="fas fa-plus mr-2"></i>
+                                    Xem thêm bình luận
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Tab -->
+                    <div id="gallery" class="tab-pane">
+                        <div class="glass-card rounded-2xl p-6 floating-card">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-2xl font-bold gradient-text">Thư viện ảnh (45)</h3>
+                                <div class="flex items-center gap-4">
+                                    <select class="glass-card border-0 rounded-lg px-4 py-2 text-sm">
+                                        <option>Tất cả</option>
+                                        <option>Cover Art</option>
+                                        <option>Character Art</option>
+                                        <option>Fan Art</option>
+                                    </select>
+                                    <button class="action-btn morphing-btn bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 text-sm">
+                                        <i class="fas fa-upload mr-2"></i>
+                                        Tải lên
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 1" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 2" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 3" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 4" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 5" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 6" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 7" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="gallery-item" onclick="openImageModal('images/truyen1.jpg')">
+                                    <img src="images/truyen1.jpg" alt="Gallery 8" class="w-full h-48 object-cover">
+                                    <div class="gallery-overlay">
+                                        <i class="fas fa-search-plus"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-8">
+                                <button class="action-btn morphing-btn bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3">
+                                    <i class="fas fa-plus mr-2"></i>
+                                    Xem thêm ảnh
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Quick Stats -->
+                <div class="glass-card rounded-2xl p-6 floating-card">
+                    <h3 class="text-lg font-bold gradient-text mb-4">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        Thống kê nhanh
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Lượt xem hôm nay</span>
+                            <span class="font-bold text-green-600">+15.2K</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Bình luận mới</span>
+                            <span class="font-bold text-blue-600">+234</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Lượt thích</span>
+                            <span class="font-bold text-red-600">+1.8K</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 text-sm">Xếp hạng</span>
+                            <span class="font-bold text-purple-600">#1</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reading Progress -->
+                <div class="glass-card rounded-2xl p-6 floating-card">
+                    <h3 class="text-lg font-bold gradient-text mb-4">Tiến độ đọc</h3>
+                    <div class="text-center mb-4">
+                        <svg class="progress-ring w-24 h-24 mx-auto" viewBox="0 0 84 84">
+                            <circle cx="42" cy="42" r="40" stroke="#e5e7eb" stroke-width="4" fill="none"/>
+                            <circle class="progress-ring-circle" cx="42" cy="42" r="40" stroke="url(#gradient)" stroke-width="4" fill="none" style="stroke-dashoffset: 62.8;"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-2xl font-bold gradient-text">75%</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-600 mb-2">Đã đọc 134/179 chương</p>
+                        <button class="action-btn morphing-btn bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 text-sm w-full">
+                            <i class="fas fa-play mr-2"></i>
+                            Tiếp tục đọc
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="mission-card floating-card">
+                    <h3 class="text-lg font-bold mb-4">
+                        <i class="fas fa-trophy mr-2"></i>
+                        Nhiệm vụ Solo Leveling
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm">Đọc 5 chương</span>
+                                <span class="text-sm font-bold">3/5</span>
+                            </div>
+                            <div class="mission-progress">
+                                <div class="mission-progress-fill" style="width: 60%"></div>
+                            </div>
+                            <p class="text-xs mt-2 opacity-80">Phần thưởng: 50 điểm + Badge đặc biệt</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm">Bình luận chương mới</span>
+                                <span class="text-sm font-bold">0/1</span>
+                            </div>
+                            <div class="mission-progress">
+                                <div class="mission-progress-fill" style="width: 0%"></div>
+                            </div>
+                            <p class="text-xs mt-2 opacity-80">Phần thưởng: 25 điểm</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm">Chia sẻ truyện</span>
+                                <span class="text-sm font-bold">1/1</span>
+                            </div>
+                            <div class="mission-progress">
+                                <div class="mission-progress-fill" style="width: 100%"></div>
+                            </div>
+                            <p class="text-xs mt-2 opacity-80">✅ Hoàn thành! +30 điểm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Info -->
+                <div class="author-card floating-card">
+                    <div class="author-avatar">
+                        <img src="images/truyen1.jpg" alt="Chugong" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Chugong</h3>
+                    <p class="text-sm opacity-90 mb-4">Tác giả Solo Leveling</p>
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="text-lg font-bold">15</div>
+                            <div class="text-xs opacity-80">Tác phẩm</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg font-bold">2.5M</div>
+                            <div class="text-xs opacity-80">Người theo dõi</div>
+                        </div>
+                    </div>
+                    <button class="action-btn morphing-btn bg-white/20 backdrop-blur-sm border border-white/30 text-white px-6 py-2 w-full">
+                        <i class="fas fa-user-plus mr-2"></i>
+                        Theo dõi tác giả
+                    </button>
+                </div>
+
+                <!-- Related Comics -->
+                <div class="glass-card rounded-2xl p-6 floating-card">
+                    <h3 class="text-lg font-bold gradient-text mb-4">
+                        <i class="fas fa-book mr-2"></i>
+                        Truyện liên quan
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="related-comic">
+                            <div class="flex gap-3 p-3">
+                                <img src="images/truyen1.jpg" alt="Tower of God" class="w-16 h-20 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 text-sm mb-1">Tower of God</h4>
+                                    <p class="text-gray-600 text-xs mb-2">Chương 588</p>
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-yellow-500 text-xs">★★★★☆</span>
+                                        <span class="text-gray-500 text-xs">9.2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="related-comic">
+                            <div class="flex gap-3 p-3">
+                                <img src="images/truyen1.jpg" alt="The Beginning After The End" class="w-16 h-20 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 text-sm mb-1">The Beginning After The End</h4>
+                                    <p class="text-gray-600 text-xs mb-2">Chương 156</p>
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-yellow-500 text-xs">★★★★★</span>
+                                        <span class="text-gray-500 text-xs">9.6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="related-comic">
+                            <div class="flex gap-3 p-3">
+                                <img src="images/truyen1.jpg" alt="Omniscient Reader" class="w-16 h-20 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 text-sm mb-1">Omniscient Reader</h4>
+                                    <p class="text-gray-600 text-xs mb-2">Chương 134</p>
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-yellow-500 text-xs">★★★★★</span>
+                                        <span class="text-gray-500 text-xs">9.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="related-comic">
+                            <div class="flex gap-3 p-3">
+                                <img src="images/truyen1.jpg" alt="Tomb Raider King" class="w-16 h-20 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 text-sm mb-1">Tomb Raider King</h4>
+                                    <p class="text-gray-600 text-xs mb-2">Chương 289</p>
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-yellow-500 text-xs">★★★★☆</span>
+                                        <span class="text-gray-500 text-xs">9.1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="action-btn morphing-btn bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 text-sm w-full mt-4">
+                        <i class="fas fa-plus mr-2"></i>
+                        Xem thêm gợi ý
+                    </button>
+                </div>
+
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Action Button -->
+    <button class="floating-action-btn bounce" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Share Modal -->
+    <div id="shareModal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold gradient-text">Chia sẻ truyện</h3>
+                <button onclick="closeShareModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <button class="action-btn morphing-btn bg-blue-600 text-white px-4 py-3 flex items-center justify-center">
+                    <i class="fab fa-facebook-f mr-2"></i>
+                    Facebook
+                </button>
+                <button class="action-btn morphing-btn bg-sky-500 text-white px-4 py-3 flex items-center justify-center">
+                    <i class="fab fa-twitter mr-2"></i>
+                    Twitter
+                </button>
+                <button class="action-btn morphing-btn bg-green-600 text-white px-4 py-3 flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i>
+                    WhatsApp
+                </button>
+                <button class="action-btn morphing-btn bg-red-600 text-white px-4 py-3 flex items-center justify-center">
+                    <i class="fab fa-pinterest mr-2"></i>
+                    Pinterest
+                </button>
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Link chia sẻ</label>
+                <div class="flex gap-2">
+                    <input type="text" value="https://comicverse.com/solo-leveling" class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" readonly>
+                    <button onclick="copyLink()" class="action-btn morphing-btn bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rating Modal -->
+    <div id="ratingModal" class="modal">
+        <div class="modal-content">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold gradient-text">Đánh giá truyện</h3>
+                <button onclick="closeRatingModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="text-center mb-6">
+                <p class="text-gray-600 mb-4">Bạn đánh giá Solo Leveling như thế nào?</p>
+                <div class="flex justify-center gap-2 mb-4">
+                    <button class="star text-4xl hover:text-yellow-500" data-rating="1">☆</button>
+                    <button class="star text-4xl hover:text-yellow-500" data-rating="2">☆</button>
+                    <button class="star text-4xl hover:text-yellow-500" data-rating="3">☆</button>
+                    <button class="star text-4xl hover:text-yellow-500" data-rating="4">☆</button>
+                    <button class="star text-4xl hover:text-yellow-500" data-rating="5">☆</button>
+                </div>
+                <p class="text-sm text-gray-500 mb-4">Nhấn vào sao để đánh giá</p>
+            </div>
+            
+            <div class="mb-6">
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Nhận xét (tùy chọn)</label>
+                <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" rows="4" placeholder="Chia sẻ cảm nghĩ của bạn về truyện..."></textarea>
+            </div>
+            
+            <div class="flex gap-4">
+                <button onclick="closeRatingModal()" class="flex-1 action-btn morphing-btn bg-gray-200 text-gray-700 px-4 py-3">
+                    Hủy
+                </button>
+                <button class="flex-1 action-btn morphing-btn bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-3">
+                    Gửi đánh giá
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="relative max-w-4xl w-full mx-4">
+            <button onclick="closeImageModal()" class="absolute top-4 right-4 text-white bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/70 z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="/placeholder.svg" alt="Gallery Image" class="w-full h-auto rounded-lg">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+        <!-- Animated Top Border -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-600 bg-[length:200%_100%] animate-gradient"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- About -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-slate-800 relative inline-block">
+                        Về MangaHub
+                        <div class="absolute -bottom-1 left-0 w-8 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full"></div>
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Nền tảng đọc truyện tranh trực tuyến hàng đầu với kho truyện đa dạng và chất lượng cao.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-facebook-f text-sm group-hover:scale-110 transition-transform duration-300"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-twitter text-sm group-hover:scale-110 transition-transform duration-300"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-instagram text-sm group-hover:scale-110 transition-transform duration-300"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-r hover:from-primary-600 hover:to-secondary-600 shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 group">
+                            <i class="fab fa-discord text-sm group-hover:scale-110 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-slate-800 relative inline-block">
+                        Liên kết nhanh
+                        <div class="absolute -bottom-1 left-0 w-8 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full"></div>
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Truyện mới cập nhật</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Truyện mới cập nhật</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Truyện hot nhất</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Truyện hot nhất</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Truyện hoàn thành</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Truyện hoàn thành</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Lịch sử đọc</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Lịch sử đọc</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Truyện yêu thích</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Truyện yêu thích</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-slate-800 relative inline-block">
+                        Thể loại phổ biến
+                        <div class="absolute -bottom-1 left-0 w-8 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full"></div>
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Hành động</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Hành động</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Tình cảm</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Tình cảm</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Hài hước</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Hài hước</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Fantasy</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Fantasy</span>
+                        </a>
+                        <a href="#" class="block text-slate-600 hover:text-primary-600 transition-all duration-300 relative group">
+                            <span class="relative z-10">Kinh dị</span>
+                            <i class="fas fa-arrow-right absolute left-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300 text-primary-600 text-sm"></i>
+                            <span class="absolute left-0 group-hover:left-6 transition-all duration-300">Kinh dị</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-slate-800 relative inline-block">
+                        Đăng ký nhận tin
+                        <div class="absolute -bottom-1 left-0 w-8 h-1 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-full"></div>
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Nhận thông báo về truyện mới và cập nhật hấp dẫn
+                    </p>
+                    <form id="newsletter-form" class="space-y-3">
+                        <input type="email" id="newsletter-email" placeholder="Email của bạn" required 
+                               class="w-full bg-white border-2 border-slate-200 rounded-lg px-4 py-3 outline-none focus:border-primary-300 focus:ring-4 focus:ring-primary-100 transition-all duration-300">
+                        <button type="submit" id="newsletter-btn" 
+                                class="w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300 relative overflow-hidden group">
+                            <span class="relative z-10">Đăng ký</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-secondary-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-slate-200 mt-12 pt-8 text-center text-slate-600">
+                <p>&copy; 2025 <a href="#" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors duration-300">MangaHub</a>. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/layout.js"></script>
+
+
+    <script src="js/detail.js"></script>
+</body>
+</html>
